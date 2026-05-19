@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Sistema de Alunos{% endblock %}</title>
+</head>
+<body>
+    {% block content %}
+    <ul>
+    {% for aluno in alunos %}
+        <li>
+            <strong>{{ loop.index }}</strong> - {{ aluno.nome }} (Nota: {{ aluno.nota }}) 
+            
+            - Status: 
+            {% if aluno.nota >= 9 %}
+                <span>Excelente</span>
+            {% elif aluno.nota >= 7 %}
+                <span>Aprovado</span>
+            {% else %}
+                <span>Reprovado</span>
+            {% endif %}
+        </li>
+    {% else %}
+        <li>Nenhum aluno cadastrado.</li>
+    {% endfor %}
+    </ul>
+    {% endblock %}
+    <h1>Lista de Alunos e Situação</h1>
+
+</body>
+</html>

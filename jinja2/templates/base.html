@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!-- base.html -->
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    {% block content %}
+    <p>“Olá, {{ nome }}”</p>
+    {% endblock %}
+</body>
+</html> 
