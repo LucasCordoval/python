@@ -1,0 +1,39 @@
+body{
+
+    font-family: Arial, sans-serif;
+    display: flex;
+    background-color: black;
+    color: white;
+    margin: 0;
+    text-align: center;
+
+}
+
+.menu {
+    width: 200px;
+    background-color: #26c6e2;
+    padding: 20px;
+    height: 95vh;
+    margin-right: 50px;
+       
+}
+
+.conteudo {
+    flex: 1;
+    padding: 20px;
+}
+
+
+.menu ul {
+    list-style-type: nome;
+    padding: 0;
+}
+
+
+.menu ul li a {
+    text-decoration: nome;
+    color: white;
+    display: block;
+    padding: 10px 0;
+
+}
